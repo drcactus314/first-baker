@@ -3,16 +3,21 @@
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
+  --color-secondary-dark: #a28268;
   --color-brand-dark: #465929;
-  --color-brand-light: #819b57;
+  --color-brand-normal: #819b57;
+  --color-brand-light: #cfcfbc;
 }
 
 /* Base */
+
 * {
   box-sizing: border-box;
 }
+
 body {
   color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
   font-family: Poppins, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -28,11 +33,13 @@ h6,
 p {
   margin-top: 0;
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 .visually-hidden {
   position: absolute;
   left: -10000px;
@@ -41,65 +48,85 @@ ul {
   height: 1px;
   overflow: hidden;
 }
+
 .section {
   padding: 48px 0;
 }
+
 .container {
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
 }
+
 /* button */
+
 .button {
   color: var(--color-primary-light);
   font-weight: 600;
-  background-color: var(--color-brand-light);
-  border: 2px solid var(--color-brand-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
   padding: 16px 32px;
 }
+
 .button:hover {
   color: var(--color-brand-dark);
   background-color: transparent;
 }
+
 /* link */
+
 .link {
   color: var(--color-primary-light);
   text-decoration: none;
   line-height: 1.5;
 }
+
 .link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   font-weight: 600;
   /* text-decoration: underline; */
 }
+
 /* Header section */
+
 header {
-  background-color: lightgray;
+  background-color: lightgray; /*Remove*/
 }
+
 .header-container {
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 .header-nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 40px;
 }
+
 .header-menu {
   display: flex;
   gap: 64px;
   flex-grow: 1;
   justify-content: center;
 }
+
 /* Hero section */
+
 .hero-section {
   padding: 272px 0px;
+  background-image: url("../img/hero-section-pekarnia-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
+
 .hero-title {
   margin-bottom: 0;
   color: var(--color-primary-light);
@@ -107,66 +134,101 @@ header {
   font-size: 128px;
   font-weight: 900;
 }
+
 .hero-title .accent {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 /* Advantages section */
+
 .advantages-section {
   padding: 16px 0;
-  background-color: var(--color-brand-light);
+  background-color: var(--color-brand-normal);
 }
+
 .advantages-list {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
+
 .advantages-item {
   font-size: 20px;
   font-weight: 300;
   color: var(--color-primary-light);
 }
+
 /* Sections */
+
 .section-title {
   color: var(--color-primary-dark);
 }
+
 .section-title {
   font-size: 64px;
   line-height: 1.3;
   font-weight: 900;
 }
+
+.section-title.centered{
+  text-align: center;
+}
+
 .section-title .accent {
   color: var(--color-brand-dark);
 }
+
 /* Tradition section   */
 
 .traditions-section {
   padding-top: 96px;
 }
-.tradition-container{
+
+.tradition-container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-.traditions-content{
+
+.traditions-content {
   max-width: 710px;
 }
+
 .traditions-title {
   margin-bottom: 42px;
 }
 
 .traditions-text .brand {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   font-weight: 600;
 }
 
 .traditions-text .uppercase {
   text-transform: uppercase;
 }
-.traditions-text.limited{
+.traditions-text.limited {
   max-width: 340px;
 }
+
 /* Chefs title */
+
+.chefs-title {
+  max-width: 535px;
+  margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after  {
+  display: block;
+  content: "";
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+}
+
+.chef-image{
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0px 0px var(--color-primary-light), -16px 16px 0px 2px var(--color-brand-light);
+}
 
 .chef-title {
   margin-bottom: 16px;
@@ -174,24 +236,29 @@ header {
   font-weight: 600;
 }
 
-.chefs-title {
-  margin-bottom: 80px;
+/* Formats-section */
+
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
 }
 
-/* Formats-section */
-.formats-item{
-  flex-basis: calc( (100% - 40px) / 3);
-}
-.formats-list{
+.formats-list {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.format-card{
+.format-card {
+  height: 444px;
   border-radius: 16px;
-  border: 1px solid #000;  /*remove*/
+  border: 1px solid #000; /*remove*/
   padding: 24px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(49, 38, 26, 0) 55.21%,
+    rgb(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
 }
 
 .format-title {
@@ -228,9 +295,17 @@ address {
 }
 
 .address-link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 .address-copyright {
   font-size: 14px;
+}
+
+.footer {
+  background-color: var(--color-primary-dark);
+  background-image: url("../img/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
