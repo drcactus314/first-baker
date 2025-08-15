@@ -89,18 +89,22 @@ ul {
   color: var(--color-primary-light);
   text-decoration: none;
   line-height: 1.5;
+  transition: color 0.3s;
 }
 
 .link:hover {
   color: var(--color-brand-normal);
-  font-weight: 600;
-  /* text-decoration: underline; */
 }
 
 /* Header section */
 
 header {
-  background-color: lightgray; /*Remove*/
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
 }
 
 .header-container {
@@ -127,7 +131,13 @@ header {
 
 .hero-section {
   padding: 272px 0px;
-  background-image: url("../img/hero-section-pekarnia-background.jpg");
+  background-image: linear-gradient(
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url("../img/hero-section-pekarnia-background.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -204,6 +214,10 @@ header {
   margin-bottom: 42px;
 }
 
+.traditions-text {
+  max-width: 680px;
+}
+
 .traditions-text .brand {
   color: var(--color-brand-normal);
   font-weight: 600;
@@ -213,7 +227,7 @@ header {
   text-transform: uppercase;
 }
 .traditions-text.limited {
-  max-width: 340px;
+  max-width: 330px;
 }
 
 /* Chefs title */
@@ -278,6 +292,7 @@ header {
 
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
+  transition: transform 0.4s;
 }
 
 .formats-container {
@@ -295,7 +310,7 @@ header {
 .format-card {
   height: 444px;
   border-radius: 16px;
-  border: 1px solid #000; /*remove*/
+  border: 1px solid lightgray; /*remove*/
   padding: 24px;
   background-image: linear-gradient(
     180deg,
@@ -303,6 +318,11 @@ header {
     rgb(49, 38, 26, 0.71) 72.92%,
     var(--color-primary-dark) 100%
   );
+  transition: 0.3s;
+}
+
+.format-card:hover {
+  transform: scale(1.05);
 }
 
 .format-title {
@@ -339,6 +359,10 @@ header {
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-brand-light);
+}
+
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 
 /* Contact section */
@@ -444,7 +468,7 @@ address {
   fill: var(--color-brand-dark);
 }
 /* Modal window */
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -454,24 +478,26 @@ address {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  transition: opacity 0.3s, visibility 0.3s;
 }
-.modal{
+.modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.modal-btn-close{
+.modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
 }
-
-.parent:last-child
