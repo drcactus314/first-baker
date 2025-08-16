@@ -1,5 +1,27 @@
-@import url(./fonts.css);
-
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("../fonts/poppins-v23-latin-300.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../fonts/poppins-v23-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("../fonts/poppins-v23-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 900;
+  src: url("../fonts/poppins-v23-latin-900.woff2") format("woff2");
+}
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
@@ -8,8 +30,6 @@
   --color-brand-normal: #819b57;
   --color-brand-light: #cfcfbc;
 }
-
-/* Base */
 
 *,
 *::after,
@@ -26,6 +46,7 @@ body {
   line-height: 1.5;
   margin: 0;
 }
+
 h1,
 h2,
 h3,
@@ -55,19 +76,6 @@ ul {
   overflow: hidden;
 }
 
-.section {
-  padding: 48px 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 1288px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* button */
-
 .button {
   color: var(--color-primary-light);
   font-weight: 600;
@@ -83,8 +91,6 @@ ul {
   background-color: transparent;
 }
 
-/* link */
-
 .link {
   color: var(--color-primary-light);
   text-decoration: none;
@@ -95,8 +101,6 @@ ul {
 .link:hover {
   color: var(--color-brand-normal);
 }
-
-/* Header section */
 
 header {
   position: relative;
@@ -127,17 +131,9 @@ header {
   justify-content: center;
 }
 
-/* Hero section */
-
 .hero-section {
   padding: 272px 0px;
-  background-image: linear-gradient(
-      102.76deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url("../img/hero-section-pekarnia-background.jpg");
+  background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url("../img/hero-section-pekarnia-background.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -155,8 +151,22 @@ header {
   color: var(--color-brand-normal);
 }
 
-/* Advantages section */
+.section {
+  padding: 48px 0;
+}
 
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* button */
+/* link */
+/* Header section */
+/* Hero section */
+/* Advantages section */
 .advantages-section {
   padding: 16px 0;
   background-color: var(--color-brand-normal);
@@ -175,7 +185,6 @@ header {
 }
 
 /* Sections */
-
 .section-title {
   color: var(--color-primary-dark);
 }
@@ -195,7 +204,6 @@ header {
 }
 
 /* Tradition section   */
-
 .traditions-section {
   padding-top: 96px;
 }
@@ -226,12 +234,12 @@ header {
 .traditions-text .uppercase {
   text-transform: uppercase;
 }
+
 .traditions-text.limited {
   max-width: 330px;
 }
 
 /* Chefs title */
-
 .chefs-title {
   position: relative;
   margin: 0 auto 80px;
@@ -269,10 +277,10 @@ header {
   display: flex;
   gap: 30px;
 }
+
 .chef-image {
   border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0px 0px var(--color-primary-light),
-    -16px 16px 0px 2px var(--color-brand-light);
+  box-shadow: -16px 16px 0px 0px var(--color-primary-light), -16px 16px 0px 2px var(--color-brand-light);
 }
 
 .chef-title {
@@ -284,12 +292,12 @@ header {
 .chef-text p {
   margin-bottom: 24px;
 }
+
 .chef-text p:last-child {
   margin-bottom: 0px;
 }
 
 /* Formats-section */
-
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
   transition: transform 0.4s;
@@ -312,12 +320,7 @@ header {
   border-radius: 16px;
   border: 1px solid lightgray; /*remove*/
   padding: 24px;
-  background-image: linear-gradient(
-    180deg,
-    rgb(49, 38, 26, 0) 55.21%,
-    rgb(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%
-  );
+  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
   transition: 0.3s;
 }
 
@@ -340,7 +343,6 @@ header {
 }
 
 /* Carousel-button */
-
 .carousel-button {
   display: flex;
   flex-shrink: 0;
@@ -366,7 +368,6 @@ header {
 }
 
 /* Contact section */
-
 .contact-section {
   padding-bottom: 96px;
 }
@@ -387,7 +388,6 @@ header {
 }
 
 /* Footer */
-
 .footer {
   padding: 32px 0;
   position: relative;
@@ -460,6 +460,7 @@ address {
   font-size: 14px;
   color: #cfcfbc;
 }
+
 .address-item {
   fill: var(--color-primary-light);
 }
@@ -467,6 +468,7 @@ address {
 .address-item:hover {
   fill: var(--color-brand-dark);
 }
+
 /* Modal window */
 .backdrop {
   position: fixed;
@@ -481,6 +483,7 @@ address {
   padding: 20px 0;
   transition: opacity 0.3s, visibility 0.3s;
 }
+
 .modal {
   position: relative;
   width: 100%;
@@ -492,6 +495,7 @@ address {
   border-radius: 32px;
   overflow-y: auto;
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -505,7 +509,6 @@ address {
 }
 
 /* Form */
-
 .form-field {
   margin-bottom: 32px;
 }
@@ -520,10 +523,20 @@ address {
   border-radius: 8px;
 }
 
+.form-input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1.17;
+  color: var(--color-secondary-dark);
+}
+
 .form-input::placeholder {
   font-size: 16px;
   line-height: 1.17;
   color: var(--color-secondary-dark);
+}
+
+.form-input:focus::-moz-placeholder {
+  color: var(--color-primary-dark);
 }
 
 .form-input:focus::placeholder {
@@ -536,23 +549,24 @@ address {
   outline: none;
 }
 
-.form-button{
+.form-button {
   display: block;
   margin: 0 auto 24px;
 }
 
-.form-terms{
+.form-terms {
   margin: 0 auto;
   max-width: 215px;
   font-weight: 500;
   font-size: 12px;
   text-align: center;
 }
-.form-terms-link{
+
+.form-terms-link {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
   font-size: 12px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /* .checkbox-container{
@@ -582,4 +596,4 @@ address {
   border: 1px solid var(--color-primary-dark);
   border-radius: 2px;
 }
- */
+ */ /*# sourceMappingURL=main.css.map */
